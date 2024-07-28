@@ -518,3 +518,268 @@
 // // Test case
 // console.log(capitalizeWords("hello world from javascript")); // Output: "Hello World From Javascript"
 // console.log(capitalizeWords("this is a test")); // Output: "This Is A Test"
+
+
+
+
+// 81-masala
+// function uniqueWords(s) {
+//     return s.split(' ').filter((item,  _, arr) => arr.indexOf(item) ===arr.lastIndexOf(item))
+//
+// }
+//
+// // Test case
+// console.log(uniqueWords("this is a test this is only a test")); // Output: ["only"]
+// console.log(uniqueWords("hello world hello")); // Output: ["world"]
+
+
+
+
+// 82-masala
+// function collectValues(obj) {
+//    let value =[]
+//     function rex(obj){
+//        for(let key in obj){
+// if(typeof obj[key] === 'object' && obj[key] !== null){
+// rex(obj[key]);
+// }else {
+//     value.push(obj[key]);
+// }
+//        }
+//     }
+//     rex(obj);
+//    return value;
+// }
+//
+// // Test case
+// const obj = {
+//     a: 1,
+//     b: {
+//         c: 2,
+//         d: {
+//             e: 3,
+//             f: {
+//                 g: 4
+//             }
+//         }
+//     }
+// };
+// console.log(collectValues(obj)); // Output: [1, 2, 3, 4]
+
+
+
+
+// 83-masala
+// function swapFirstLast(s) {
+//   return s.split(' ').map(item => {
+//       if(item.length <= 1) {
+//           return item;
+//       }
+//       return item[item.length -1] + item.slice(1,-1) + item[0]
+//   }).join(" ")
+// }
+//
+// // Test case
+// console.log(swapFirstLast("hello world")); // Output: "oellh dlorw"
+// console.log(swapFirstLast("a quick brown fox")); // Output: "a kuicq nrowb fxo"
+
+
+// 84-masala
+// function indexOfMax(arr) {
+//     let res = 0
+//     let resvalue = arr[0]
+//     arr.forEach((item,index) => {
+//      if(item > resvalue){
+//          resvalue = item;
+//          res = index;
+//      }
+//
+//     })
+//     return res
+// }
+//
+// // Test case
+// console.log(indexOfMax([1, 3, 7, 1, 2, 5, 7])); // Output: 2
+
+
+// 85-masala
+// function sqrtElements(arr) {
+// return arr.map(item => Math.sqrt(item))
+// }
+//
+// // Test case
+// console.log(sqrtElements([1, 4, 9, 16, 25])); // Output: [1, 2, 3, 4, 5]
+
+
+
+// 86-masala
+// function separateEvenOdd(arr) {
+//     let even = []
+//     let odd  =[]
+// arr.filter(item => item % 2 === 0 ? even.push(item) : odd.push(item)  )
+//     return {even, odd};
+// }
+//
+// // Test case
+// console.log(separateEvenOdd([1, 2, 3, 4, 5, 6, 7, 8, 9])); // Output: { even: [2, 4, 6, 8], odd: [1, 3, 5, 7, 9] }
+
+
+
+// 87-masala
+// function gcd(a) {
+//     a = a.filter(number => {
+//         for(let i = 2; i <=  Math.sqrt(number);i++){
+//             if( number % 2 === 0)return false;
+//         }
+//         return true;
+//     })
+//     return a;
+// }
+//
+// // Test case
+// console.log(gcd([2, 3, 4, 5, 6, 7])); // Output: [2, 3, 5, 7]
+
+
+// 88-masala
+// function rotateArray(arr, k) {
+//    k = k % arr.length;
+//    return arr.slice(-k).concat(arr.slice(0,-k));
+// }
+//
+// // Test case
+// console.log(rotateArray([1, 2, 3, 4, 5], 2)); // Output: [4, 5, 1, 2, 3]
+
+
+
+// 89-masala
+// function trimmedMean(arr) {
+//     let res = arr.length
+//     let d = 0
+//     for (let i = 0; i < arr.length; i++) {
+//         d += arr[i]
+//     }
+//     let od = d / res
+//     return od
+// }
+//
+// // Test case
+// console.log(trimmedMean([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Output: 5.5
+
+
+
+
+// 90-masala
+
+// function findPalindromes(arr) {
+//  return arr.filter(item => {
+//      let str = item.toString()
+//      let rev = str.split('').reverse().join('');
+//      return str === rev
+//  })
+// }
+//
+// // Test case
+// console.log(findPalindromes([121, 123, 202, 345, 454])); // Output: [121, 202, 454]
+
+
+
+// 91-masala
+// function allElementsEqual(arr) {
+//   let rt = arr[0]
+//    return arr.every(function (item){
+//        return item === rt
+//    })
+// }
+//
+// // Test case
+// console.log(allElementsEqual([1, 1, 1, 1])); // Output: true
+// console.log(allElementsEqual([1, 2, 1, 1])); // Output: false
+
+
+
+
+
+// 92-masala
+// function arraysHaveSameElements(arr1, arr2) {
+//     arr1.sort();
+//     arr2.sort();
+//
+//     for (let i = 0; i < arr1.length; i++) {
+//         if(arr1[i] !== arr2[i]) {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+//
+// // Test case
+// console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 1])); // Output: true
+// console.log(arraysHaveSameElements([1, 2, 3], [3, 2, 2])); // Output: false
+
+
+
+
+// 93-masala
+// function isUniqueSet(arr) {
+//    for (let i = 0; i < arr.length - 1; i++) {
+//        if(arr[i] === arr[i+1]) {
+//            return false;
+//        }
+//    }
+//    return true;
+// }
+//
+// // Test case
+// console.log(isUniqueSet([1, 2, 3, 4])); // Output: true
+// console.log(isUniqueSet([1, 2, 3, 3])); // Output: false
+
+
+
+// 94-masala
+// function hasThreeConsecutiveEvenOrOdd(arr) {
+//    let even = 0;
+//    let odd = 0;
+//    for (let i = 0; i < arr.length; i++) {
+//        if(arr[i] % 2 ===0) {
+// even++;
+// odd = 0;
+//        }else {
+//            odd++;
+//            even = 0;
+//        }
+//        if(even === 3 || odd === 3) {
+//            return true;
+//        }
+//    }
+//    return false
+// }
+//
+// // Test case
+// console.log(hasThreeConsecutiveEvenOrOdd([1, 2, 3, 4, 5, 6, 7])); // Output: false
+// console.log(hasThreeConsecutiveEvenOrOdd([1, 2, 3, 4, 6, 8, 7])); // Output: true
+
+
+
+
+// 95-masala
+// function isMonotonic(arr) {
+//     let isIncreasing = true;
+//     let isDecreasing = true;
+//
+//     for (let i = 1; i < arr.length; i++) {
+//         if (arr[i] > arr[i - 1]) {
+//             isDecreasing = false;
+//         }
+//         if (arr[i] < arr[i - 1]) {
+//             isIncreasing = false;
+//         }
+//     }
+//
+//     return isIncreasing || isDecreasing;
+//
+// }
+//
+// // Test case
+// console.log(isMonotonic([1, 2, 2, 3])); // Output: true
+// console.log(isMonotonic([6, 5, 4, 4])); // Output: true
+// console.log(isMonotonic([1, 3, 2])); // Output: false
